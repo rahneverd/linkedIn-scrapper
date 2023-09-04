@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const PORT = 3000;
 
 // Set static folder path
 const path = __dirname + '/public/';
@@ -14,6 +15,6 @@ app.use(express.json());
 
 app.use('/', require('./router'));
 
-app.listen(3000, () => {
-	console.log('listening on port ' + process.env.PORT);
+app.listen(PORT, () => {
+	console.log('listening on port ' + PORT);
 });
